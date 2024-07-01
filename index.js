@@ -4,7 +4,7 @@ const token = '7220327046:AAFzNLeSW8sGILnt5S_cMjjhqoLvO8zN8pE';
 
 const bot = new TelegramBot(token, {polling: true});
 
-const webAppUrl = 'https://t.me/mybot/myapp' 
+const webAppUrl = 'https://preferably-engaging-grubworm.ngrok-free.app/' 
 
 bot.onText(/\/start/, (msg) => {
     const chatId = msg.chat.id;

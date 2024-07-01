@@ -1,13 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import { useTelegram } from './hooks/useTelegram';
+import Header from "./components/Header/Header"
 
 function App() {
+  const {onToggleButton, tg} = useTelegram();
+
+  useEffect( () => {
+    tg.ready();
+  }, [])
+  
+    
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+        <Header />
       work
+      <button onClick={onToggleButton}>toggle</button>
     </div>
   );
 }
